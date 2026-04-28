@@ -1,9 +1,9 @@
 :root {
-  --bg: #f5f3ee;
-  --bg-alt: #efede7;
+  --bg: #f6f4ef;
+  --bg-alt: #efebe3;
   --text: #111111;
   --muted: #555555;
-  --line: #d9d4ca;
+  --line: #d7d1c7;
   --accent: #183153;
   --max-width: 1120px;
 }
@@ -34,7 +34,7 @@ a:hover {
 }
 
 .container {
-  width: min(calc(100% - 2rem), var(--max-width));
+  width: min(calc(100% - 4rem), var(--max-width));
   margin: 0 auto;
 }
 
@@ -46,7 +46,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(245, 243, 238, 0.95);
+  background: rgba(246, 244, 239, 0.96);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(8px);
 }
@@ -78,55 +78,64 @@ a:hover {
 }
 
 .hero {
-  position: relative;
+  padding: 5.5rem 0 4rem;
 }
 
-.hero-image {
-  min-height: 72vh;
-  background-image:
-    linear-gradient(rgba(17, 17, 17, 0.28), rgba(17, 17, 17, 0.36)),
-    url("etna.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: end;
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 170px;
+  gap: 4rem;
+  align-items: start;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(17, 17, 17, 0.42), rgba(17, 17, 17, 0.06));
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 0 0 4.5rem;
-  color: #ffffff;
+.hero-text {
+  max-width: 760px;
+  padding-left: 2rem;
 }
 
 .hero-kicker {
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.9rem;
   font-size: 0.88rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--accent);
 }
 
 h1 {
   margin: 0 0 1rem;
-  font-size: clamp(3rem, 7vw, 5.8rem);
+  font-size: clamp(3rem, 7vw, 5.3rem);
   line-height: 0.95;
   letter-spacing: -0.05em;
 }
 
 .hero-lead {
-  max-width: 720px;
+  max-width: 700px;
   margin: 0;
   font-size: 1.18rem;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--muted);
+}
+
+.hero-side {
+  justify-self: end;
+}
+
+.profile-image {
+  width: 170px;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+}
+
+.etna-band {
+  height: 180px;
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.18), rgba(17, 17, 17, 0.18)),
+    url("etna.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .section {
@@ -137,65 +146,38 @@ h1 {
   background: var(--bg-alt);
 }
 
-.two-col {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
-  gap: 3rem;
-  align-items: start;
-}
-
-.main-col {
-  max-width: 760px;
-}
-
-.side-col {
-  justify-self: end;
-}
-
-.profile-image {
-  width: 180px;
-  height: auto;
-  display: block;
-  border: 1px solid var(--line);
-}
-
 h2 {
-  margin: 0 0 1.25rem;
-  font-size: 2.1rem;
+  margin: 0 0 1.4rem;
+  font-size: 2.05rem;
   letter-spacing: -0.03em;
 }
 
 h3 {
-  margin: 0 0 1rem;
-  font-size: 1.05rem;
+  margin: 0 0 0.35rem;
+  font-size: 1.08rem;
+  line-height: 1.35;
 }
 
 p {
   margin: 0 0 1rem;
 }
 
+.research-list,
+.code-list {
+  margin-top: 1.4rem;
+}
+
 .research-item,
 .code-item,
 .cv-section {
-  padding: 1rem 0 1.2rem;
+  padding: 1.1rem 0 1.25rem;
   border-top: 1px solid var(--line);
-}
-
-.research-group {
-  margin-top: 1.5rem;
 }
 
 .research-item:last-child,
 .code-item:last-child,
 .cv-section:last-child {
   border-bottom: 1px solid var(--line);
-}
-
-.research-item h4,
-.code-item h4 {
-  margin: 0 0 0.2rem;
-  font-size: 1.08rem;
-  line-height: 1.35;
 }
 
 .research-authors,
@@ -228,27 +210,34 @@ p {
   font-size: 0.94rem;
 }
 
-@media (max-width: 860px) {
-  .two-col {
+@media (max-width: 900px) {
+  .hero-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .side-col {
+  .hero-text {
+    padding-left: 0;
+  }
+
+  .hero-side {
     justify-self: start;
   }
 
   .profile-image {
-    width: 140px;
+    width: 145px;
   }
 
-  .hero-image {
-    min-height: 58vh;
-    background-position: center center;
+  .etna-band {
+    height: 140px;
   }
 }
 
 @media (max-width: 640px) {
+  .container {
+    width: min(calc(100% - 2rem), var(--max-width));
+  }
+
   .nav {
     flex-direction: column;
     align-items: flex-start;
@@ -259,15 +248,19 @@ p {
     font-size: 2.7rem;
   }
 
-  .hero-content {
-    padding-bottom: 3rem;
+  .hero {
+    padding: 4rem 0 3rem;
   }
 
   .hero-lead {
-    font-size: 1.02rem;
+    font-size: 1.03rem;
   }
 
   .section {
     padding: 3.25rem 0;
+  }
+
+  .etna-band {
+    height: 110px;
   }
 }
