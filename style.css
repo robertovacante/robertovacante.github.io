@@ -18,7 +18,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.72;
@@ -61,7 +61,8 @@ a:hover {
 
 .brand {
   color: var(--text);
-  font-size: 1rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.01em;
 }
@@ -75,6 +76,7 @@ a:hover {
 .nav-links a {
   color: var(--muted);
   font-size: 0.95rem;
+  font-weight: 500;
 }
 
 .hero {
@@ -95,24 +97,32 @@ a:hover {
 
 .hero-kicker {
   margin: 0 0 0.9rem;
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: var(--text);
 }
 
 h1 {
   margin: 0 0 1rem;
-  font-size: clamp(3rem, 7vw, 5.3rem);
-  line-height: 0.95;
-  letter-spacing: -0.05em;
-  font-weight: 700;
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  font-weight: 600;
 }
 
 .hero-lead {
   max-width: 700px;
   margin: 0;
-  font-size: 1.16rem;
+  font-size: 1.12rem;
   color: var(--muted);
 }
 
@@ -128,15 +138,15 @@ h1 {
 }
 
 .etna-band {
-  height: 220px;
-  background-image:
-    linear-gradient(rgba(17, 17, 17, 0.12), rgba(17, 17, 17, 0.12)),
-    url("etna.jpg");
-  background-size: cover;
-  background-position: center 42%;
-  background-repeat: no-repeat;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+  background: #e9e4db;
+}
+
+.etna-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .section {
@@ -149,16 +159,16 @@ h1 {
 
 h2 {
   margin: 0 0 1.4rem;
-  font-size: 2.05rem;
-  letter-spacing: -0.03em;
-  font-weight: 700;
+  font-size: 2.4rem;
+  letter-spacing: -0.02em;
+  font-weight: 600;
 }
 
 h3 {
   margin: 0 0 0.35rem;
-  font-size: 1.08rem;
-  line-height: 1.35;
-  font-weight: 700;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
 p {
@@ -230,11 +240,6 @@ p {
   .profile-image {
     width: 145px;
   }
-
-  .etna-band {
-    height: 170px;
-    background-position: center 45%;
-  }
 }
 
 @media (max-width: 640px) {
@@ -249,7 +254,7 @@ p {
   }
 
   h1 {
-    font-size: 2.7rem;
+    font-size: 3rem;
   }
 
   .hero {
@@ -257,15 +262,10 @@ p {
   }
 
   .hero-lead {
-    font-size: 1.03rem;
+    font-size: 1.02rem;
   }
 
   .section {
     padding: 3.25rem 0;
-  }
-
-  .etna-band {
-    height: 120px;
-    background-position: center 48%;
   }
 }
