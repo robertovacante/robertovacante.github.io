@@ -1,13 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roberto Vacante</title>
+  <meta
+    name="description"
+    content="Roberto Vacante — Research Associate in applied microeconomics, development, and causal inference."
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Your Name</h1>
-  <p>This is my first website.</p>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">Roberto Vacante</a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Code</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Applied Microeconomics · Development · Causal Inference</p>
+          <h1>Roberto Vacante</h1>
+          <p class="lead">
+            Research Associate interested in applied microeconomics, development economics,
+            labor, impact evaluation, and empirical research design.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#research">Research</a>
+            <a class="button secondary" href="#projects">GitHub Projects</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <p><strong>Current role</strong><br>Research Associate</p>
+            <p><strong>Focus</strong><br>Impact evaluation, field evidence, applied micro</p>
+            <p><strong>Background</strong><br>University of Bologna · University of Catania</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container narrow">
+        <h2>About</h2>
+        <p>
+          I am a Research Associate with a background in applied economics. My work focuses on
+          applied microeconomics, development, labor markets, and causal inference. I hold an
+          MSc in Applied Economics and Markets from the University of Bologna, after completing
+          a BSc in Economics at the University of Catania. My research experience includes work
+          with Decio Coviello, Nicola Persico, and Denni Tommasi, combining data analysis,
+          survey work, and empirical research implementation.
+        </p>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="container">
+        <h2>Research</h2>
+
+        <div class="cards">
+          <article class="card">
+            <span class="card-label">Registered RCT</span>
+            <h3>Vocational Training for Ugandan and Refugee Youths</h3>
+            <p>
+              Experimental research on vocational training and labor market outcomes in Uganda.
+            </p>
+            <a href="https://www.socialscienceregistry.org/trials/14460" target="_blank" rel="noreferrer">
+              View registry
+            </a>
+          </article>
+
+          <article class="card">
+            <span class="card-label">Registered RCT</span>
+            <h3>Information Frictions, Screening, and Matching</h3>
+            <p>
+              Ongoing experimental work on labor market frictions, screening, and matching.
+            </p>
+            <a href="https://www.socialscienceregistry.org/trials/18082" target="_blank" rel="noreferrer">
+              View registry
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Code</h2>
+
+        <div class="cards">
+          <article class="card featured">
+            <span class="card-label">Featured Project</span>
+            <h3>Threshold-Based Policy Learning via Strata Means</h3>
+            <p>
+              Stata code for threshold-based policy learning in stratified randomized data,
+              with evaluation along a percentile path using inverse probability weighting.
+            </p>
+            <a href="https://github.com/robertovacante/Threshold-Based-Policy-Learning-via-Strata-Means" target="_blank" rel="noreferrer">
+              View on GitHub
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>US Immigration Analysis</h3>
+            <p>
+              Web scraping and data analysis of U.S. immigration decisions.
+            </p>
+            <a href="https://github.com/robertovacante/US-Immigration-Analysis" target="_blank" rel="noreferrer">
+              View on GitHub
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>FWHR Routine</h3>
+            <p>
+              Automated facial-width-height ratio computation used in political economy research.
+            </p>
+            <a href="https://github.com/robertovacante/FWHR-routine" target="_blank" rel="noreferrer">
+              View on GitHub
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>Survey Sample</h3>
+            <p>
+              Stata-based survey simulation, data generation, and basic analysis.
+            </p>
+            <a href="https://github.com/robertovacante/survey_sample" target="_blank" rel="noreferrer">
+              View on GitHub
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container narrow">
+        <h2>Contact</h2>
+        <div class="contact-box">
+          <p><strong>Email</strong><br><a href="mailto:roberto.vacante@studio.unibo.it">roberto.vacante@studio.unibo.it</a></p>
+          <p><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/robertovacante/" target="_blank" rel="noreferrer">linkedin.com/in/robertovacante</a></p>
+          <p><strong>GitHub</strong><br><a href="https://github.com/robertovacante" target="_blank" rel="noreferrer">github.com/robertovacante</a></p>
+          <p><strong>CV</strong><br><a href="CV.pdf" target="_blank" rel="noreferrer">Download CV</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Roberto Vacante</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
