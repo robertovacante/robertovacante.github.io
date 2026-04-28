@@ -18,7 +18,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.72;
@@ -90,12 +90,12 @@ a:hover {
 
 .hero-text {
   max-width: 760px;
-  padding-left: 2rem;
+  padding-left: 3.5rem;
 }
 
 .hero-kicker {
   margin: 0 0 0.9rem;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
@@ -106,12 +106,13 @@ h1 {
   font-size: clamp(3rem, 7vw, 5.3rem);
   line-height: 0.95;
   letter-spacing: -0.05em;
+  font-weight: 700;
 }
 
 .hero-lead {
   max-width: 700px;
   margin: 0;
-  font-size: 1.18rem;
+  font-size: 1.16rem;
   color: var(--muted);
 }
 
@@ -127,12 +128,12 @@ h1 {
 }
 
 .etna-band {
-  height: 180px;
+  height: 220px;
   background-image:
-    linear-gradient(rgba(17, 17, 17, 0.18), rgba(17, 17, 17, 0.18)),
+    linear-gradient(rgba(17, 17, 17, 0.12), rgba(17, 17, 17, 0.12)),
     url("etna.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: center 42%;
   background-repeat: no-repeat;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -150,12 +151,14 @@ h2 {
   margin: 0 0 1.4rem;
   font-size: 2.05rem;
   letter-spacing: -0.03em;
+  font-weight: 700;
 }
 
 h3 {
   margin: 0 0 0.35rem;
   font-size: 1.08rem;
   line-height: 1.35;
+  font-weight: 700;
 }
 
 p {
@@ -229,7 +232,8 @@ p {
   }
 
   .etna-band {
-    height: 140px;
+    height: 170px;
+    background-position: center 45%;
   }
 }
 
@@ -261,6 +265,7 @@ p {
   }
 
   .etna-band {
-    height: 110px;
+    height: 120px;
+    background-position: center 48%;
   }
 }
