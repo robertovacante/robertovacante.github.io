@@ -1,11 +1,11 @@
 :root {
-  --bg: #faf9f6;
+  --bg: #f8f7f4;
   --surface: #ffffff;
   --text: #111111;
   --muted: #5f5f5f;
-  --line: #e5e5e5;
+  --line: #e4e4e4;
   --accent: #1d3557;
-  --max-width: 1000px;
+  --max-width: 1020px;
   --radius: 18px;
 }
 
@@ -35,6 +35,256 @@ a:hover {
 }
 
 .container {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
+}
+
+.narrow {
+  max-width: 760px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(248, 247, 244, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.hero {
+  padding: 84px 0 52px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.lead {
+  max-width: 38rem;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.85rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.button.primary {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+}
+
+.button.primary:hover {
+  text-decoration: none;
+  opacity: 0.93;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--text);
+}
+
+.button.secondary:hover {
+  text-decoration: none;
+  background: #f1f1f1;
+}
+
+.profile-card {
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.profile-image {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+  object-fit: cover;
+}
+
+.section {
+  padding: 42px 0;
+}
+
+h2 {
+  margin: 0 0 1.2rem;
+  font-size: 2rem;
+  letter-spacing: -0.03em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius);
+  padding: 1.35rem;
+}
+
+.card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.card p {
+  margin: 0 0 0.85rem;
+  color: var(--muted);
+}
+
+.card-label {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.featured {
+  grid-column: span 2;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cv-block {
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius);
+  padding: 1.3rem;
+}
+
+.cv-block h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1.08rem;
+}
+
+.cv-block p {
+  margin: 0 0 0.9rem;
+  color: var(--muted);
+}
+
+.cv-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.cv-list li {
+  margin-bottom: 0.35rem;
+}
+
+.contact-box {
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius);
+  padding: 1.35rem;
+}
+
+.contact-box p {
+  margin: 0 0 1rem;
+}
+
+.site-footer {
+  padding: 28px 0 44px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 860px) {
+  .hero-grid,
+  .cards,
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.9rem 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero {
+    padding-top: 56px;
+  }
+}.container {
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 0 auto;
 }
