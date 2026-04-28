@@ -82,8 +82,8 @@ a:hover {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.55fr 0.65fr;
-  gap: 2rem;
+  grid-template-columns: 1.7fr 0.5fr;
+  gap: 2.5rem;
   align-items: center;
 }
 
@@ -148,13 +148,13 @@ h1 {
 .profile-wrap {
   justify-self: end;
   width: 100%;
-  max-width: 250px;
+  max-width: 180px;
 }
 
 .profile-image {
   width: 100%;
   display: block;
-  border-radius: 14px;
+  border-radius: 12px;
   object-fit: cover;
 }
 
@@ -273,7 +273,7 @@ p {
 
   .profile-wrap {
     justify-self: start;
-    max-width: 220px;
+    max-width: 160px;
   }
 }
 
