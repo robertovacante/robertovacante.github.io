@@ -363,11 +363,6 @@ p {
   font-style: italic;
 }
 
-.external-link::after {
-  content: " ↗";
-  font-size: 0.82em;
-}
-
 .cv-download {
   max-width: 620px;
 }
