@@ -266,7 +266,7 @@ h2 {
 
 .about-content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 230px;
+  grid-template-columns: minmax(0, 1fr) 260px;
   gap: 2.5rem;
   align-items: start;
 }
@@ -277,8 +277,8 @@ h2 {
 
 .drums-photo img {
   display: block;
-  width: 173px;
-  height: 225px;
+  width: 230px;
+  height: 300px;
   object-fit: cover;
   object-position: center;
   border: 1px solid var(--border);
